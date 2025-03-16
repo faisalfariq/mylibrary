@@ -1,11 +1,9 @@
 import React from "react";
+import avatar from '../../public/img/avatar/avatar-1.png';
 
 const Header: React.FC = () => {
 
-    const handleLogout = ()=>{
-        return true;
-    }
-    return(
+    return (
         <>
             <div className="navbar-bg"></div>
             <nav className="navbar navbar-expand-lg main-navbar">
@@ -16,21 +14,10 @@ const Header: React.FC = () => {
                 </form>
                 <ul className="navbar-nav navbar-right">
                     <li className="dropdown"><a href="#" data-toggle="dropdown"
-                            className="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                            <img alt="image" src={'img/avatar/avatar-1.png'} className="rounded-circle mr-1"/>
-                            {/* <div className="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div> */}
-                            <div className="d-sm-none d-lg-inline-block">Hi, Faisal{}</div>
-                        </a>
-                        <div className="dropdown-menu dropdown-menu-right">
-                            <div className="dropdown-divider"></div>
-                            {/* <a href="#" onClick="document.getElementById('logout-form').submit();" */}
-                            <a href="#" onClick={handleLogout}
-                                className="dropdown-item has-icon text-danger">
-                                <i className="fas fa-sign-out-alt"></i> Logout
-                            </a>
-                            <form action="{{ route('logout') }}" id="logout-form" method="POST" className="d-none">
-                            </form>
-                        </div>
+                        className="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                        <img alt="image" src={avatar} className="rounded-circle mr-1" />
+                        <div className="d-sm-none d-lg-inline-block">Admin</div>
+                    </a>
                     </li>
                 </ul>
             </nav>
